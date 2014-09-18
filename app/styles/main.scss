@@ -2,6 +2,7 @@
 // endbower
 
 @import 'yaui/config';
+@import 'yaui/helpers';
 @import 'yaui/layout';
 
 body {
@@ -15,4 +16,40 @@ body {
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+header {
+  @extend .row;
+}
+
+main {
+  @extend .row;
+}
+
+.nap {
+  @include columns(3);
+}
+
+.cta {
+  @include columns(3, right);
+}
+
+.content {
+  @include columns(6);
+}
+
+.optional {
+  @include columns(3, right);
+}
+
+footer {
+  @extend .row;
+}
+
+.twelve-cols {
+  @extend .row;
+}
+
+.twelve-cols > div {
+  @include columns;
 }

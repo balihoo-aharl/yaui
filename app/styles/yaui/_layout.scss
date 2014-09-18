@@ -1,0 +1,16 @@
+.row {
+  background: #ffffff;
+  width: $page;
+  margin: 0 auto;
+  @extend .clearfix;
+}
+
+@mixin columns($column-span: 1, $direction: left) {
+  $column-width: $page / $columns;
+  $column-padding: $gutter / 2;
+
+  box-sizing: border-box;
+  width: $column-width * $column-span;
+  float: $direction;
+  padding: 0 $column-padding;
+}
