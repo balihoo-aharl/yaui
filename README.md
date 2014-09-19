@@ -8,6 +8,7 @@ For now you can follow the steps below to get started.
 
 1. Clone this repo.
 2. Run 'npm install'.
-3. Run 'grunt serve'.
+3. Run 'bower install'.
+4. Run 'grunt serve'.
 
 The YAUI code is located in 'app/styles/yaui'
