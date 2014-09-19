@@ -16,12 +16,13 @@ body {
   padding: 0.2em 0;
 }
 
-header {
+.header {
   @extend .row;
 }
 
-main {
+.main {
   @extend .row;
+  @extend .word-break;
 }
 
 .nap {
@@ -40,7 +41,7 @@ main {
   @include columns(3, right, clear);
 }
 
-footer {
+.footer {
   @extend .row;
 }
 
