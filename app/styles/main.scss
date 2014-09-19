@@ -37,7 +37,7 @@ main {
 }
 
 .optional {
-  @include columns(3, right);
+  @include columns(3, right, clear);
 }
 
 footer {

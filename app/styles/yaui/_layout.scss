@@ -5,7 +5,7 @@
   @extend .clearfix;
 }
 
-@mixin columns($column-span: 1, $direction: left) {
+@mixin columns($column-span: 1, $direction: left, $clear: no) {
   $column-width: $page / $columns;
   $column-padding: $gutter / 2;
 
@@ -13,4 +13,7 @@
   width: $column-width * $column-span;
   float: $direction;
   padding: 0 $column-padding;
+  @if $clear == clear {
+    clear: $direction;
+  }
 }
