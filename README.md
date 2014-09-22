@@ -11,4 +11,4 @@ For now you can follow the steps below to get started.
 3. Run 'bower install'.
 4. Run 'grunt serve'.
 
-The YAUI code is located in 'app/styles/yaui'
+The YAUI code is located in 'app/styles/yaui'. Begin by looking over the config variables in _config.scss.
