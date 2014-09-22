@@ -18,3 +18,20 @@
       -ms-hyphens: auto;
           hyphens: auto;
 }
+
+// Calculated and fixed values *DO NOT CHANGE*
+$breakpoint-aliases: small large x-large;
+
+/*
+ * Mixin for easy media queries
+ * @include bp(width) { SCSS here };
+ * valid width values are small large x-large
+*/
+@mixin bp($type) {
+  $pos: index($breakpoint-aliases, $type);
+  $bp: nth($breakpoints, $pos);
+
+  @media (min-width: $bp) {
+    @content;
+  }
+}

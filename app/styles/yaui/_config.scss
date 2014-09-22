@@ -4,8 +4,7 @@
  *
  */
 
-$page: 1080px;
-$columns: 12;
-$gutter: 20px;
-
-
+$desktop: 1080px;
+$breakpoints: 1px 800px 1200px; // Media query small large x-large
+$columns: 4 12 12; // Columns for small large x-large
+$gutter: 10px;

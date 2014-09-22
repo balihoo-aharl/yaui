@@ -26,19 +26,19 @@ body {
 }
 
 .nap {
-  @include columns(3);
+  @include columns(2 3 3);
 }
 
 .cta {
-  @include columns(3, right);
+  @include columns(2 3 3, right);
 }
 
 .content {
-  @include columns(6);
+  @include columns(4 6 6);
 }
 
 .optional {
-  @include columns(3, right, clear);
+  @include columns(2 3 3, right, clear);
 }
 
 .footer {

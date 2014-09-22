@@ -1,19 +1,45 @@
 .row {
   background: #ffffff;
-  width: $page;
   margin: 0 auto;
   @extend .clearfix;
+  @include bp(small) {
+    width: 95%;
+  }
+  @include bp(large) {
+    width: $desktop;
+  }
+  @include bp(x-large) {
+    width: 80%;
+  }
 }
 
-@mixin columns($column-span: 1, $direction: left, $clear: no) {
-  $column-width: $page / $columns;
-  $column-padding: $gutter / 2;
+@mixin columns($column-span: 1 1 1, $direction: left, $clear: no) {
 
   box-sizing: border-box;
-  width: $column-width * $column-span;
-  float: $direction;
-  padding: 0 $column-padding;
-  @if $clear == clear {
-    clear: $direction;
+  float: left;
+  clear: none;
+
+  @each $bp in $breakpoint-aliases {
+    @include bp($bp) {
+      $pos: index($breakpoint-aliases, $bp);
+      $col-width: 100 / nth($columns, $pos);
+      width: nth($column-span, $pos) * $col-width * 1%;
+      @if $bp == small {
+        $column-padding: $gutter / 2;
+        padding: 0 $column-padding;
+      }
+      @if $bp == large {
+        $column-padding: $gutter;
+        padding: 0 $column-padding;
+        float: $direction;
+        @if $clear == clear {
+          clear: $direction;
+        }
+      }
+      @if $bp == x-large {
+        $column-padding: $gutter * 2;
+        padding: 0 $column-padding;
+      }
+    }
   }
 }
