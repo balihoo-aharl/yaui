@@ -1,16 +1,20 @@
-$sans-serif: Helvetica, Arial, sans-serif;
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700';
+
+$sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
 $serif: Georgia, serif;
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
 
 $base-font-size: 1em;
-$base-line-height: $base-font-size * 1.5;
+$base-line-height: $base-font-size * 2;
 $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
 $header-line-height: $base-font-size * 1.25;
 
 // Colors
 $blue: #477DCA;
 $dark-gray: #333;
+
+$background-color: #ffffff;
 
 $base-font-color: $dark-gray;
 $base-accent-color: $blue;
