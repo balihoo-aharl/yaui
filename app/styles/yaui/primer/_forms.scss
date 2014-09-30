@@ -1,0 +1,12 @@
+form {
+  @extend .clearfix;
+}
+input[type='text'], input[type='email'], input[type='password'], input[type='url'], input[type='search'] {
+  margin: 0.5em 0;
+}
+
+input[type='submit'], input[type='reset'], button[type='submit'] {
+  margin: 0.5em;
+  display: block;
+  float: right;
+}
